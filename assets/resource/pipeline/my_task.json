@@ -1,5 +1,2132 @@
 {
-    "MyTask1": {},
-    "MyTask2": {},
-    "MyTask3": {}
+    "点击我的": {
+        "recognition": "OCR",
+        "expected": "我的",
+        "action": "Click",
+        "next": [
+            "点击我的积分"
+        ]
+    },
+    "点击我的积分": {
+        "recognition": "OCR",
+        "expected": "我的积分",
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "next": [
+            "点击签到",
+            "我的积分向下滑动"
+        ]
+    },
+    "点击签到": {
+        "recognition": "OCR",
+        "expected": "签到",
+        "action": "Click",
+        "next": [
+            "我的积分向下滑动"
+        ]
+    },
+    "我的积分向下滑动": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "next": [
+            "领取"
+        ]
+    },
+    "领取": {
+        "recognition": "OCR",
+        "expected": "领取",
+        "action": "Click",
+        "next": [
+            "返回"
+        ]
+    },
+    "返回": {
+        "recognition": "TemplateMatch",
+        "template": "返回按钮.png",
+        "action": "Click",
+        "next": [
+            "首页"
+        ]
+    },
+    "首页": {
+        "recognition": "OCR",
+        "expected": "大象圈",
+        "action": "Click",
+        "next": [
+            "进入发现"
+        ]
+    },
+    "进入发现": {
+        "recognition": "OCR",
+        "expected": "发现",
+        "action": "Click",
+        "next": [
+            "点击随便一个话题"
+        ]
+    },
+    "点击图文浏览": {
+        "action": "Click",
+        "target": [
+            346,
+            152,
+            10,
+            10
+        ],
+        "next": [
+            "向下滑动"
+        ]
+    },
+    "点击随便一个话题": {
+        "action": "Swipe",
+        "begin": [
+            522,
+            158,
+            10,
+            10
+        ],
+        "end": [
+            198,
+            161,
+            10,
+            10
+        ],
+        "pre_delay": 3000,
+        "next": [
+            "点击图文浏览"
+        ]
+    },
+    "向下滑动": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "duration": 10,
+        "next": [
+            "向下滑动完成",
+            "向下滑动"
+        ]
+    },
+    "向下滑动完成": {
+        "recognition": "OCR",
+        "expected": "我也是有底线的",
+        "next": [
+            "点赞",
+            "转发",
+            "收藏"
+        ]
+    },
+    "点赞": {
+        "recognition": "TemplateMatch",
+        "template": "点赞按钮.png",
+        "action": "Click",
+        "next": [
+            "点赞",
+            "转发",
+            "收藏"
+        ],
+        "pre_wait_freezes": 250
+    },
+    "转发": {
+        "recognition": "TemplateMatch",
+        "template": "转发按钮.png",
+        "action": "Click",
+        "next": [
+            "转发微信好友"
+        ],
+        "pre_wait_freezes": 250
+    },
+    "转发微信好友": {
+        "recognition": "TemplateMatch",
+        "template": "转发微信好友按钮.png",
+        "action": "Click",
+        "next": [
+            "转发2"
+        ],
+        "pre_wait_freezes": 250
+    },
+    "转发2": {
+        "recognition": "TemplateMatch",
+        "template": "转发按钮.png",
+        "action": "Click",
+        "next": [
+            "转发微信好友2"
+        ],
+        "pre_wait_freezes": 250
+    },
+    "转发微信好友2": {
+        "recognition": "TemplateMatch",
+        "template": "转发微信好友按钮.png",
+        "action": "Click",
+        "next": [
+            "转发3"
+        ],
+        "pre_wait_freezes": 250
+    },
+    "转发3": {
+        "recognition": "TemplateMatch",
+        "template": "转发按钮.png",
+        "action": "Click",
+        "next": [
+            "转发微信好友3"
+        ],
+        "pre_wait_freezes": 250
+    },
+    "转发微信好友3": {
+        "recognition": "TemplateMatch",
+        "template": "转发微信好友按钮.png",
+        "action": "Click",
+        "next": [
+            "转发4"
+        ],
+        "pre_wait_freezes": 250
+    },
+    "转发4": {
+        "recognition": "TemplateMatch",
+        "template": "转发按钮.png",
+        "action": "Click",
+        "next": [
+            "转发微信好友4"
+        ],
+        "pre_wait_freezes": 250
+    },
+    "转发微信好友4": {
+        "recognition": "TemplateMatch",
+        "template": "转发微信好友按钮.png",
+        "action": "Click",
+        "next": [
+            "转发5"
+        ],
+        "pre_wait_freezes": 250
+    },
+    "转发微信好友5": {
+        "recognition": "TemplateMatch",
+        "template": "转发微信好友按钮.png",
+        "action": "Click",
+        "next": [
+            "转发6"
+        ],
+        "pre_wait_freezes": 250
+    },
+    "转发5": {
+        "recognition": "TemplateMatch",
+        "template": "转发按钮.png",
+        "action": "Click",
+        "next": [
+            "转发微信好友5"
+        ],
+        "pre_wait_freezes": 250
+    },
+    "转发6": {
+        "recognition": "TemplateMatch",
+        "template": "转发按钮.png",
+        "action": "Click",
+        "next": [
+            "转发微信好友6"
+        ],
+        "pre_wait_freezes": 250
+    },
+    "转发微信好友6": {
+        "recognition": "TemplateMatch",
+        "template": "转发微信好友按钮.png",
+        "action": "Click",
+        "next": [
+            "转发7"
+        ],
+        "pre_wait_freezes": 250
+    },
+    "转发7": {
+        "recognition": "TemplateMatch",
+        "template": "转发按钮.png",
+        "action": "Click",
+        "next": [
+            "转发微信好友7"
+        ],
+        "pre_wait_freezes": 250
+    },
+    "转发微信好友7": {
+        "recognition": "TemplateMatch",
+        "template": "转发微信好友按钮.png",
+        "action": "Click",
+        "next": [
+            "转发8"
+        ],
+        "pre_wait_freezes": 250
+    },
+    "转发8": {
+        "recognition": "TemplateMatch",
+        "template": "转发按钮.png",
+        "action": "Click",
+        "next": [
+            "转发微信好友8"
+        ],
+        "pre_wait_freezes": 250
+    },
+    "转发微信好友8": {
+        "recognition": "TemplateMatch",
+        "template": "转发微信好友按钮.png",
+        "action": "Click",
+        "next": [
+            "收藏",
+            "收藏返回"
+        ],
+        "pre_wait_freezes": 250
+    },
+    "收藏": {
+        "recognition": "TemplateMatch",
+        "template": "收藏按钮.png",
+        "action": "Click",
+        "next": [
+            "收藏返回"
+        ],
+        "pre_wait_freezes": 250
+    },
+    "收藏返回": {
+        "recognition": "TemplateMatch",
+        "template": "返回按钮2.png",
+        "action": "Click",
+        "next": [
+            "大象台"
+        ]
+    },
+    "大象台": {
+        "recognition": "OCR",
+        "expected": "大象台",
+        "action": "Click",
+        "next": [
+            "河南卫视"
+        ]
+    },
+    "河南卫视": {
+        "recognition": "TemplateMatch",
+        "template": "河南卫视.png",
+        "action": "Click",
+        "next": [
+            "观看电视1"
+        ]
+    },
+    "观看电视1": {
+        "action": "Swipe",
+        "begin": [
+            400,
+            300,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            300,
+            10,
+            10
+        ],
+        "pre_delay": 30000,
+        "next": [
+            "观看直播1"
+        ]
+    },
+    "观看直播1": {
+        "recognition": "OCR",
+        "expected": "首页",
+        "pre_delay": 20000,
+        "action": "Click",
+        "next": [
+            "观看直播2"
+        ]
+    },
+    "观看直播2": {
+        "recognition": "OCR",
+        "expected": "直播",
+        "action": "Click",
+        "next": [
+            "观看直播3"
+        ]
+    },
+    "观看直播3": {
+        "recognition": "OCR",
+        "expected": "直播中",
+        "action": "Click",
+        "next": [
+            "观看直播4"
+        ]
+    },
+    "观看直播4": {
+        "recognition": "TemplateMatch",
+        "template": "返回按钮3.png",
+        "action": "Click",
+        "pre_delay": 20000,
+        "next": [
+            "观看直播向下滑动"
+        ]
+    },
+    "观看直播向下滑动": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "duration": 2000,
+        "next": [
+            "观看直播5"
+        ]
+    },
+    "观看直播5": {
+        "recognition": "OCR",
+        "expected": "直播中",
+        "action": "Click",
+        "next": [
+            "观看直播完成"
+        ]
+    },
+    "观看直播完成": {
+        "recognition": "TemplateMatch",
+        "template": "返回按钮3.png",
+        "action": "Click",
+        "pre_delay": 20000,
+        "next": [
+            "评论大象圈开始"
+        ]
+    },
+    "评论大象圈开始": {
+        "recognition": "OCR",
+        "expected": "我的",
+        "action": "Click",
+        "next": [
+            "进入圈子"
+        ]
+    },
+    "进入圈子": {
+        "recognition": "OCR",
+        "expected": "关注",
+        "action": "Click",
+        "next": [
+            "进入关注圈子"
+        ]
+    },
+    "进入关注圈子": {
+        "recognition": "OCR",
+        "expected": "大象圈官方客服",
+        "action": "Click",
+        "next": [
+            "开始评论1"
+        ]
+    },
+    "锁定图文": {
+        "recognition": "OCR",
+        "expected": "图文",
+        "action": "Click",
+        "next": [
+            "开始评论1"
+        ]
+    },
+    "开始评论1": {
+        "recognition": "OCR",
+        "expected": "评论",
+        "action": "Click",
+        "next": [
+            "进入评论1"
+        ]
+    },
+    "进入评论1": {
+        "recognition": "OCR",
+        "expected": "期待你查重0%的评论",
+        "action": "Click",
+        "next": [
+            "进行评论1"
+        ]
+    },
+    "进行评论1": {
+        "recognition": "TemplateMatch",
+        "template": "大象新语.png",
+        "action": "Click",
+        "next": [
+            "发表评论1"
+        ]
+    },
+    "发表评论1": {
+        "recognition": "OCR",
+        "expected": "发表",
+        "action": "Click",
+        "next": [
+            "返回1"
+        ]
+    },
+    "返回1": {
+        "recognition": "TemplateMatch",
+        "template": "返回按钮2.png",
+        "action": "Click",
+        "next": [
+            "向下滑动1"
+        ]
+    },
+    "向下滑动1": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "duration": 2000,
+        "next": [
+            "开始评论2"
+        ]
+    },
+    "开始评论2": {
+        "recognition": "OCR",
+        "expected": "评论",
+        "action": "Click",
+        "next": [
+            "进入评论2"
+        ]
+    },
+    "进入评论2": {
+        "recognition": "OCR",
+        "expected": "期待你查重0%的评论",
+        "action": "Click",
+        "next": [
+            "进行评论2"
+        ]
+    },
+    "进行评论2": {
+        "recognition": "TemplateMatch",
+        "template": "大象新语.png",
+        "action": "Click",
+        "next": [
+            "发表评论2"
+        ]
+    },
+    "发表评论2": {
+        "recognition": "OCR",
+        "expected": "发表",
+        "action": "Click",
+        "next": [
+            "返回2"
+        ]
+    },
+    "返回2": {
+        "recognition": "TemplateMatch",
+        "template": "返回按钮2.png",
+        "action": "Click",
+        "next": [
+            "向下滑动2"
+        ]
+    },
+    "向下滑动2": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "duration": 2000,
+        "next": [
+            "开始评论3"
+        ]
+    },
+    "开始评论3": {
+        "recognition": "OCR",
+        "expected": "评论",
+        "action": "Click",
+        "next": [
+            "进入评论3"
+        ]
+    },
+    "进入评论3": {
+        "recognition": "OCR",
+        "expected": "期待你查重0%的评论",
+        "action": "Click",
+        "next": [
+            "进行评论3"
+        ]
+    },
+    "进行评论3": {
+        "recognition": "TemplateMatch",
+        "template": "大象新语.png",
+        "action": "Click",
+        "next": [
+            "发表评论3"
+        ]
+    },
+    "发表评论3": {
+        "recognition": "OCR",
+        "expected": "发表",
+        "action": "Click",
+        "next": [
+            "返回3"
+        ]
+    },
+    "返回3": {
+        "recognition": "TemplateMatch",
+        "template": "返回按钮2.png",
+        "action": "Click",
+        "next": [
+            "向下滑动3"
+        ]
+    },
+    "向下滑动3": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "duration": 2000,
+        "next": [
+            "开始评论4"
+        ]
+    },
+    "开始评论4": {
+        "recognition": "OCR",
+        "expected": "评论",
+        "action": "Click",
+        "next": [
+            "进入评论4"
+        ]
+    },
+    "进入评论4": {
+        "recognition": "OCR",
+        "expected": "期待你查重0%的评论",
+        "action": "Click",
+        "next": [
+            "进行评论4"
+        ]
+    },
+    "进行评论4": {
+        "recognition": "TemplateMatch",
+        "template": "大象新语.png",
+        "action": "Click",
+        "next": [
+            "发表评论4"
+        ]
+    },
+    "发表评论4": {
+        "recognition": "OCR",
+        "expected": "发表",
+        "action": "Click",
+        "next": [
+            "返回4"
+        ]
+    },
+    "返回4": {
+        "recognition": "TemplateMatch",
+        "template": "返回按钮2.png",
+        "action": "Click",
+        "next": [
+            "向下滑动4"
+        ]
+    },
+    "向下滑动4": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "duration": 2000,
+        "next": [
+            "开始评论5"
+        ]
+    },
+    "开始评论5": {
+        "recognition": "OCR",
+        "expected": "评论",
+        "action": "Click",
+        "next": [
+            "进入评论5"
+        ]
+    },
+    "进入评论5": {
+        "recognition": "OCR",
+        "expected": "期待你查重0%的评论",
+        "action": "Click",
+        "next": [
+            "进行评论5"
+        ]
+    },
+    "进行评论5": {
+        "recognition": "TemplateMatch",
+        "template": "大象新语.png",
+        "action": "Click",
+        "next": [
+            "发表评论5"
+        ]
+    },
+    "发表评论5": {
+        "recognition": "OCR",
+        "expected": "发表",
+        "action": "Click",
+        "next": [
+            "返回5"
+        ]
+    },
+    "返回5": {
+        "recognition": "TemplateMatch",
+        "template": "返回按钮2.png",
+        "action": "Click",
+        "next": [
+            "向下滑动5"
+        ]
+    },
+    "向下滑动5": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "duration": 2000,
+        "next": [
+            "开始评论6"
+        ]
+    },
+    "开始评论6": {
+        "recognition": "OCR",
+        "expected": "评论",
+        "action": "Click",
+        "next": [
+            "进入评论6"
+        ]
+    },
+    "进入评论6": {
+        "recognition": "OCR",
+        "expected": "期待你查重0%的评论",
+        "action": "Click",
+        "next": [
+            "进行评论6"
+        ]
+    },
+    "进行评论6": {
+        "recognition": "TemplateMatch",
+        "template": "大象新语.png",
+        "action": "Click",
+        "next": [
+            "发表评论6"
+        ]
+    },
+    "发表评论6": {
+        "recognition": "OCR",
+        "expected": "发表",
+        "action": "Click",
+        "next": [
+            "返回6"
+        ]
+    },
+    "返回6": {
+        "recognition": "TemplateMatch",
+        "template": "返回按钮2.png",
+        "action": "Click",
+        "next": [
+            "向下滑动6"
+        ]
+    },
+    "向下滑动6": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "duration": 2000,
+        "next": [
+            "开始评论7"
+        ]
+    },
+    "开始评论7": {
+        "recognition": "OCR",
+        "expected": "评论",
+        "action": "Click",
+        "next": [
+            "进入评论7"
+        ]
+    },
+    "进入评论7": {
+        "recognition": "OCR",
+        "expected": "期待你查重0%的评论",
+        "action": "Click",
+        "next": [
+            "进行评论7"
+        ]
+    },
+    "进行评论7": {
+        "recognition": "TemplateMatch",
+        "template": "大象新语.png",
+        "action": "Click",
+        "next": [
+            "发表评论7"
+        ]
+    },
+    "发表评论7": {
+        "recognition": "OCR",
+        "expected": "发表",
+        "action": "Click",
+        "next": [
+            "返回7"
+        ]
+    },
+    "返回7": {
+        "recognition": "TemplateMatch",
+        "template": "返回按钮2.png",
+        "action": "Click",
+        "next": [
+            "向下滑动7"
+        ]
+    },
+    "向下滑动7": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "duration": 2000,
+        "next": [
+            "开始评论8"
+        ]
+    },
+    "开始评论8": {
+        "recognition": "OCR",
+        "expected": "评论",
+        "action": "Click",
+        "next": [
+            "进入评论8"
+        ]
+    },
+    "进入评论8": {
+        "recognition": "OCR",
+        "expected": "期待你查重0%的评论",
+        "action": "Click",
+        "next": [
+            "进行评论8"
+        ]
+    },
+    "进行评论8": {
+        "recognition": "TemplateMatch",
+        "template": "大象新语.png",
+        "action": "Click",
+        "next": [
+            "发表评论8"
+        ]
+    },
+    "发表评论8": {
+        "recognition": "OCR",
+        "expected": "发表",
+        "action": "Click",
+        "next": [
+            "返回8"
+        ]
+    },
+    "返回8": {
+        "recognition": "TemplateMatch",
+        "template": "返回按钮2.png",
+        "action": "Click",
+        "next": [
+            "向下滑动8"
+        ]
+    },
+    "向下滑动8": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "duration": 2000,
+        "next": [
+            "开始评论9"
+        ]
+    },
+    "开始评论9": {
+        "recognition": "OCR",
+        "expected": "评论",
+        "action": "Click",
+        "next": [
+            "进入评论9"
+        ]
+    },
+    "进入评论9": {
+        "recognition": "OCR",
+        "expected": "期待你查重0%的评论",
+        "action": "Click",
+        "next": [
+            "进行评论9"
+        ]
+    },
+    "进行评论9": {
+        "recognition": "TemplateMatch",
+        "template": "大象新语.png",
+        "action": "Click",
+        "next": [
+            "发表评论9"
+        ]
+    },
+    "发表评论9": {
+        "recognition": "OCR",
+        "expected": "发表",
+        "action": "Click",
+        "next": [
+            "返回9"
+        ]
+    },
+    "返回9": {
+        "recognition": "TemplateMatch",
+        "template": "返回按钮2.png",
+        "action": "Click",
+        "next": [
+            "向下滑动9"
+        ]
+    },
+    "向下滑动9": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "duration": 2000,
+        "next": [
+            "开始评论10"
+        ]
+    },
+    "开始评论10": {
+        "recognition": "OCR",
+        "expected": "评论",
+        "action": "Click",
+        "next": [
+            "进入评论10"
+        ]
+    },
+    "进入评论10": {
+        "recognition": "OCR",
+        "expected": "期待你查重0%的评论",
+        "action": "Click",
+        "next": [
+            "进行评论10"
+        ]
+    },
+    "进行评论10": {
+        "recognition": "TemplateMatch",
+        "template": "大象新语.png",
+        "action": "Click",
+        "next": [
+            "发表评论10"
+        ]
+    },
+    "发表评论10": {
+        "recognition": "OCR",
+        "expected": "发表",
+        "action": "Click",
+        "next": [
+            "返回10"
+        ]
+    },
+    "返回10": {
+        "recognition": "TemplateMatch",
+        "template": "返回按钮2.png",
+        "action": "Click",
+        "next": [
+            "返回关注列表"
+        ]
+    },
+    "返回关注列表": {
+        "recognition": "TemplateMatch",
+        "template": "返回按钮2.png",
+        "action": "Click",
+        "next": [
+            "返回主页"
+        ]
+    },
+    "返回主页": {
+        "recognition": "TemplateMatch",
+        "template": "返回按钮2.png",
+        "action": "Click",
+        "next": [
+            "返回首页"
+        ]
+    },
+    "返回首页": {
+        "recognition": "OCR",
+        "expected": "首页",
+        "action": "Click",
+        "next": [
+            "刷视频开始"
+        ]
+    },
+    "刷视频开始": {
+        "action": "Click",
+        "target": [
+            233,
+            93,
+            0,
+            0
+        ],
+        "next": [
+            "点赞视频1"
+        ]
+    },
+    "点赞视频1": {
+        "action": "Click",
+        "target": [
+            682,
+            798,
+            0,
+            0
+        ],
+        "pre_delay": 30000,
+        "next": [
+            "收藏视频1"
+        ]
+    },
+    "收藏视频1": {
+        "action": "Click",
+        "target": [
+            684,
+            951,
+            0,
+            0
+        ],
+        "next": [
+            "视频向下滑动1"
+        ]
+    },
+    "视频向下滑动1": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "duration": 2000,
+        "next": [
+            "点赞视频2"
+        ]
+    },
+    "点赞视频2": {
+        "action": "Click",
+        "target": [
+            682,
+            798,
+            0,
+            0
+        ],
+        "pre_delay": 30000,
+        "next": [
+            "收藏视频2"
+        ]
+    },
+    "收藏视频2": {
+        "action": "Click",
+        "target": [
+            684,
+            951,
+            0,
+            0
+        ],
+        "next": [
+            "视频向下滑动2"
+        ]
+    },
+    "视频向下滑动2": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "duration": 2000,
+        "next": [
+            "点赞视频3"
+        ]
+    },
+    "点赞视频3": {
+        "action": "Click",
+        "target": [
+            682,
+            798,
+            0,
+            0
+        ],
+        "pre_delay": 30000,
+        "next": [
+            "收藏视频3"
+        ]
+    },
+    "收藏视频3": {
+        "action": "Click",
+        "target": [
+            684,
+            951,
+            0,
+            0
+        ],
+        "next": [
+            "视频向下滑动3"
+        ]
+    },
+    "视频向下滑动3": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "duration": 2000,
+        "next": [
+            "点赞视频4"
+        ]
+    },
+    "点赞视频4": {
+        "action": "Click",
+        "target": [
+            682,
+            798,
+            0,
+            0
+        ],
+        "pre_delay": 30000,
+        "next": [
+            "收藏视频4"
+        ]
+    },
+    "收藏视频4": {
+        "action": "Click",
+        "target": [
+            684,
+            951,
+            0,
+            0
+        ],
+        "next": [
+            "视频向下滑动4"
+        ]
+    },
+    "视频向下滑动4": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "duration": 2000,
+        "next": [
+            "点赞视频5"
+        ]
+    },
+    "点赞视频5": {
+        "action": "Click",
+        "target": [
+            682,
+            798,
+            0,
+            0
+        ],
+        "pre_delay": 30000,
+        "next": [
+            "收藏视频5"
+        ]
+    },
+    "收藏视频5": {
+        "action": "Click",
+        "target": [
+            684,
+            951,
+            0,
+            0
+        ],
+        "next": [
+            "视频向下滑动5"
+        ]
+    },
+    "视频向下滑动5": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "duration": 2000,
+        "next": [
+            "点赞视频6"
+        ]
+    },
+    "点赞视频6": {
+        "action": "Click",
+        "target": [
+            682,
+            798,
+            0,
+            0
+        ],
+        "pre_delay": 30000,
+        "next": [
+            "收藏视频6"
+        ]
+    },
+    "收藏视频6": {
+        "action": "Click",
+        "target": [
+            684,
+            951,
+            0,
+            0
+        ],
+        "next": [
+            "视频向下滑动6"
+        ]
+    },
+    "视频向下滑动6": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "duration": 2000,
+        "next": [
+            "点赞视频7"
+        ]
+    },
+    "点赞视频7": {
+        "action": "Click",
+        "target": [
+            682,
+            798,
+            0,
+            0
+        ],
+        "pre_delay": 30000,
+        "next": [
+            "收藏视频7"
+        ]
+    },
+    "收藏视频7": {
+        "action": "Click",
+        "target": [
+            684,
+            951,
+            0,
+            0
+        ],
+        "next": [
+            "视频向下滑动8"
+        ]
+    },
+    "视频向下滑动7": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "duration": 2000,
+        "next": [
+            "点赞视频8"
+        ]
+    },
+    "点赞视频8": {
+        "action": "Click",
+        "target": [
+            682,
+            798,
+            0,
+            0
+        ],
+        "pre_delay": 30000,
+        "next": [
+            "收藏视频8"
+        ]
+    },
+    "收藏视频8": {
+        "action": "Click",
+        "target": [
+            684,
+            951,
+            0,
+            0
+        ],
+        "next": [
+            "视频向下滑动8"
+        ]
+    },
+    "视频向下滑动8": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "duration": 2000,
+        "next": [
+            "点赞视频9"
+        ]
+    },
+    "点赞视频9": {
+        "action": "Click",
+        "target": [
+            682,
+            798,
+            0,
+            0
+        ],
+        "pre_delay": 30000,
+        "next": [
+            "收藏视频9"
+        ]
+    },
+    "收藏视频9": {
+        "action": "Click",
+        "target": [
+            684,
+            951,
+            0,
+            0
+        ],
+        "next": [
+            "视频向下滑动9"
+        ]
+    },
+    "视频向下滑动9": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "duration": 2000,
+        "next": [
+            "点赞视频10"
+        ]
+    },
+    "点赞视频10": {
+        "action": "Click",
+        "target": [
+            682,
+            798,
+            0,
+            0
+        ],
+        "pre_delay": 30000,
+        "next": [
+            "收藏视频10"
+        ]
+    },
+    "收藏视频10": {
+        "action": "Click",
+        "target": [
+            684,
+            951,
+            0,
+            0
+        ],
+        "next": [
+            "视频向下滑动10"
+        ]
+    },
+    "视频向下滑动10": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "duration": 2000,
+        "next": [
+            "点赞视频11"
+        ]
+    },
+    "点赞视频11": {
+        "action": "Click",
+        "target": [
+            682,
+            798,
+            0,
+            0
+        ],
+        "pre_delay": 30000,
+        "next": [
+            "收藏视频11"
+        ]
+    },
+    "收藏视频11": {
+        "action": "Click",
+        "target": [
+            684,
+            951,
+            0,
+            0
+        ],
+        "next": [
+            "视频向下滑动11"
+        ]
+    },
+    "视频向下滑动11": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "duration": 2000,
+        "next": [
+            "点赞视频12"
+        ]
+    },
+    "点赞视频12": {
+        "action": "Click",
+        "target": [
+            682,
+            798,
+            0,
+            0
+        ],
+        "pre_delay": 30000,
+        "next": [
+            "收藏视频12"
+        ]
+    },
+    "收藏视频12": {
+        "action": "Click",
+        "target": [
+            684,
+            951,
+            0,
+            0
+        ],
+        "next": [
+            "视频向下滑动12"
+        ]
+    },
+    "视频向下滑动12": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "duration": 2000,
+        "next": [
+            "点赞视频13"
+        ]
+    },
+    "点赞视频13": {
+        "action": "Click",
+        "target": [
+            682,
+            798,
+            0,
+            0
+        ],
+        "pre_delay": 30000,
+        "next": [
+            "收藏视频13"
+        ]
+    },
+    "收藏视频13": {
+        "action": "Click",
+        "target": [
+            684,
+            951,
+            0,
+            0
+        ],
+        "next": [
+            "视频向下滑动13"
+        ]
+    },
+    "视频向下滑动13": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "duration": 2000,
+        "next": [
+            "点赞视频14"
+        ]
+    },
+    "点赞视频14": {
+        "action": "Click",
+        "target": [
+            682,
+            798,
+            0,
+            0
+        ],
+        "pre_delay": 30000,
+        "next": [
+            "收藏视频14"
+        ]
+    },
+    "收藏视频14": {
+        "action": "Click",
+        "target": [
+            684,
+            951,
+            0,
+            0
+        ],
+        "next": [
+            "视频向下滑动14"
+        ]
+    },
+    "视频向下滑动14": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "duration": 2000,
+        "next": [
+            "点赞视频15"
+        ]
+    },
+    "点赞视频15": {
+        "action": "Click",
+        "target": [
+            682,
+            798,
+            0,
+            0
+        ],
+        "pre_delay": 30000,
+        "next": [
+            "收藏视频15"
+        ]
+    },
+    "收藏视频15": {
+        "action": "Click",
+        "target": [
+            684,
+            951,
+            0,
+            0
+        ],
+        "next": [
+            "最终返回首页"
+        ]
+    },
+    "最终返回首页": {
+        "recognition": "OCR",
+        "expected": "我的",
+        "action": "Click",
+        "next": [
+            "发布开始1"
+        ]
+    },
+    "发布开始1": {
+        "action": "Click",
+        "target": [
+            559,
+            70,
+            0,
+            0
+        ],
+        "next": [
+            "选择图文1",
+            "发布开始1"
+        ]
+    },
+    "选择图文1": {
+        "recognition": "OCR",
+        "expected": "图文",
+        "action": "Click",
+        "next": [
+            "选择标题1"
+        ]
+    },
+    "选择标题1": {
+        "recognition": "OCR",
+        "expected": "输入标题",
+        "action": "Click",
+        "next": [
+            "点击搜狗AI1"
+        ]
+    },
+    "点击搜狗AI1": {
+        "recognition": "TemplateMatch",
+        "template": "搜狗AI.png",
+        "action": "Click",
+        "next": [
+            "点击语录1",
+            "点击搜狗AI1",
+            "选择标题1"
+        ]
+    },
+    "点击语录1": {
+        "recognition": "OCR",
+        "expected": "语录",
+        "action": "Click",
+        "next": [
+            "选择第一个1"
+        ]
+    },
+    "选择第一个1": {
+        "action": "Click",
+        "target": [
+            251,
+            761,
+            0,
+            0
+        ],
+        "next": [
+            "点击正文1"
+        ]
+    },
+    "点击正文1": {
+        "recognition": "OCR",
+        "expected": "想说点什么",
+        "action": "Click",
+        "next": [
+            "点击搜狗AI2"
+        ]
+    },
+    "点击搜狗AI2": {
+        "recognition": "TemplateMatch",
+        "template": "搜狗AI.png",
+        "action": "Click",
+        "next": [
+            "点击语录2",
+            "点击搜狗AI2",
+            "点击正文1"
+        ]
+    },
+    "点击语录2": {
+        "recognition": "OCR",
+        "expected": "语录",
+        "action": "Click",
+        "next": [
+            "选择第一个2"
+        ]
+    },
+    "选择第一个2": {
+        "action": "Click",
+        "target": [
+            251,
+            761,
+            0,
+            0
+        ],
+        "next": [
+            "进入下一步1"
+        ]
+    },
+    "进入下一步1": {
+        "action": "Click",
+        "target": [
+            678,
+            50,
+            0,
+            0
+        ],
+        "next": [
+            "添加封面1"
+        ]
+    },
+    "添加封面1": {
+        "recognition": "OCR",
+        "expected": "添加封面图",
+        "action": "Click",
+        "next": [
+            "选择封面1"
+        ]
+    },
+    "选择封面1": {
+        "action": "Click",
+        "target": [
+            449,
+            136,
+            0,
+            0
+        ],
+        "next": [
+            "确定封面图1"
+        ]
+    },
+    "确定封面图1": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "action": "Click",
+        "next": [
+            "确认剪裁1"
+        ]
+    },
+    "确认剪裁1": {
+        "action": "Click",
+        "target": [
+            682,
+            1250,
+            0,
+            0
+        ],
+        "next": [
+            "检测圈子按钮1",
+            "无圈子按钮向下滑动1"
+        ]
+    },
+    "检测圈子按钮1": {
+        "recognition": "OCR",
+        "expected": "圈子",
+        "next": [
+            "取消发布圈子1"
+        ]
+    },
+    "无圈子按钮向下滑动1": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "next": [
+            "检测圈子按钮2",
+            "无圈子按钮向下滑动1"
+        ]
+    },
+    "检测圈子按钮2": {
+        "recognition": "OCR",
+        "expected": "圈子",
+        "next": [
+            "取消发布圈子1"
+        ]
+    },
+    "取消发布圈子1": {
+        "recognition": "TemplateMatch",
+        "template": "圈子按钮.png",
+        "action": "Click",
+        "next": [
+            "发布1"
+        ]
+    },
+    "发布1": {
+        "action": "Click",
+        "target": [
+            535,
+            1238,
+            0,
+            0
+        ],
+        "next": [
+            "确认发布1"
+        ]
+    },
+    "确认发布1": {
+        "action": "Click",
+        "target": [
+            450,
+            716,
+            0,
+            0
+        ],
+        "next": [
+            "发布开始2"
+        ]
+    },
+    "发布开始2": {
+        "action": "Click",
+        "target": [
+            559,
+            70,
+            0,
+            0
+        ],
+        "next": [
+            "选择图文2",
+            "发布开始2"
+        ]
+    },
+    "选择图文2": {
+        "recognition": "OCR",
+        "expected": "图文",
+        "action": "Click",
+        "next": [
+            "选择标题2"
+        ]
+    },
+    "选择标题2": {
+        "recognition": "OCR",
+        "expected": "输入标题",
+        "action": "Click",
+        "next": [
+            "点击搜狗AI3"
+        ]
+    },
+    "点击搜狗AI3": {
+        "recognition": "TemplateMatch",
+        "template": "搜狗AI.png",
+        "action": "Click",
+        "next": [
+            "点击语录3",
+            "点击搜狗AI3",
+            "选择标题2"
+        ]
+    },
+    "点击语录3": {
+        "recognition": "OCR",
+        "expected": "语录",
+        "action": "Click",
+        "next": [
+            "选择第一个3"
+        ]
+    },
+    "选择第一个3": {
+        "action": "Click",
+        "target": [
+            251,
+            761,
+            0,
+            0
+        ],
+        "next": [
+            "点击正文3"
+        ]
+    },
+    "点击正文3": {
+        "recognition": "OCR",
+        "expected": "想说点什么",
+        "action": "Click",
+        "next": [
+            "点击搜狗AI4"
+        ]
+    },
+    "点击搜狗AI4": {
+        "recognition": "TemplateMatch",
+        "template": "搜狗AI.png",
+        "action": "Click",
+        "next": [
+            "点击语录4",
+            "点击搜狗AI4",
+            "点击正文3"
+        ]
+    },
+    "点击语录4": {
+        "recognition": "OCR",
+        "expected": "语录",
+        "action": "Click",
+        "next": [
+            "选择第一个4"
+        ]
+    },
+    "选择第一个4": {
+        "action": "Click",
+        "target": [
+            251,
+            761,
+            0,
+            0
+        ],
+        "next": [
+            "进入下一步2"
+        ]
+    },
+    "进入下一步2": {
+        "action": "Click",
+        "target": [
+            678,
+            50,
+            0,
+            0
+        ],
+        "next": [
+            "添加封面2"
+        ]
+    },
+    "添加封面2": {
+        "recognition": "OCR",
+        "expected": "添加封面图",
+        "action": "Click",
+        "next": [
+            "选择封面2"
+        ]
+    },
+    "选择封面2": {
+        "action": "Click",
+        "target": [
+            449,
+            136,
+            0,
+            0
+        ],
+        "next": [
+            "确定封面图2"
+        ]
+    },
+    "确定封面图2": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "action": "Click",
+        "next": [
+            "确认剪裁2"
+        ]
+    },
+    "确认剪裁2": {
+        "action": "Click",
+        "target": [
+            682,
+            1250,
+            0,
+            0
+        ],
+        "next": [
+            "检测圈子按钮3",
+            "无圈子按钮向下滑动2"
+        ]
+    },
+    "检测圈子按钮3": {
+        "recognition": "OCR",
+        "expected": "圈子",
+        "next": [
+            "取消发布圈子2"
+        ]
+    },
+    "无圈子按钮向下滑动2": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            800,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            50,
+            10,
+            10
+        ],
+        "next": [
+            "检测圈子按钮4",
+            "无圈子按钮向下滑动2"
+        ]
+    },
+    "检测圈子按钮4": {
+        "recognition": "OCR",
+        "expected": "圈子",
+        "next": [
+            "取消发布圈子2"
+        ]
+    },
+    "取消发布圈子2": {
+        "recognition": "TemplateMatch",
+        "template": "圈子按钮.png",
+        "action": "Click",
+        "next": [
+            "发布2"
+        ]
+    },
+    "发布2": {
+        "action": "Click",
+        "target": [
+            535,
+            1238,
+            0,
+            0
+        ],
+        "next": [
+            "确认发布2"
+        ]
+    },
+    "确认发布2": {
+        "action": "Click",
+        "target": [
+            450,
+            716,
+            0,
+            0
+        ],
+        "next": []
+    }
 }
