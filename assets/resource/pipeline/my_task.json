@@ -129,6 +129,7 @@
     "向下滑动完成": {
         "recognition": "OCR",
         "expected": "我也是有底线的",
+        "pre_wait_freezes": 250,
         "next": [
             "点赞",
             "转发",
@@ -156,11 +157,12 @@
         "pre_wait_freezes": 250
     },
     "转发微信好友": {
-        "recognition": "TemplateMatch",
-        "template": "转发微信好友按钮.png",
+        "recognition": "OCR",
+        "expected": "微信好友",
         "action": "Click",
         "next": [
-            "转发2"
+            "转发2",
+            "转发微信好友"
         ],
         "pre_wait_freezes": 250
     },
@@ -174,11 +176,12 @@
         "pre_wait_freezes": 250
     },
     "转发微信好友2": {
-        "recognition": "TemplateMatch",
-        "template": "转发微信好友按钮.png",
+        "recognition": "OCR",
+        "expected": "微信好友",
         "action": "Click",
         "next": [
-            "转发3"
+            "转发3",
+            "转发微信好友2"
         ],
         "pre_wait_freezes": 250
     },
@@ -192,11 +195,12 @@
         "pre_wait_freezes": 250
     },
     "转发微信好友3": {
-        "recognition": "TemplateMatch",
-        "template": "转发微信好友按钮.png",
+        "recognition": "OCR",
+        "expected": "微信好友",
         "action": "Click",
         "next": [
-            "转发4"
+            "转发4",
+            "转发微信好友3"
         ],
         "pre_wait_freezes": 250
     },
@@ -210,20 +214,22 @@
         "pre_wait_freezes": 250
     },
     "转发微信好友4": {
-        "recognition": "TemplateMatch",
-        "template": "转发微信好友按钮.png",
+        "recognition": "OCR",
+        "expected": "微信好友",
         "action": "Click",
         "next": [
-            "转发5"
+            "转发5",
+            "转发微信好友4"
         ],
         "pre_wait_freezes": 250
     },
     "转发微信好友5": {
-        "recognition": "TemplateMatch",
-        "template": "转发微信好友按钮.png",
+        "recognition": "OCR",
+        "expected": "微信好友",
         "action": "Click",
         "next": [
-            "转发6"
+            "转发6",
+            "转发微信好友5"
         ],
         "pre_wait_freezes": 250
     },
@@ -246,11 +252,12 @@
         "pre_wait_freezes": 250
     },
     "转发微信好友6": {
-        "recognition": "TemplateMatch",
-        "template": "转发微信好友按钮.png",
+        "recognition": "OCR",
+        "expected": "微信好友",
         "action": "Click",
         "next": [
-            "转发7"
+            "转发7",
+            "转发微信好友6"
         ],
         "pre_wait_freezes": 250
     },
@@ -264,11 +271,12 @@
         "pre_wait_freezes": 250
     },
     "转发微信好友7": {
-        "recognition": "TemplateMatch",
-        "template": "转发微信好友按钮.png",
+        "recognition": "OCR",
+        "expected": "微信好友",
         "action": "Click",
         "next": [
-            "转发8"
+            "转发8",
+            "转发微信好友7"
         ],
         "pre_wait_freezes": 250
     },
@@ -277,13 +285,15 @@
         "template": "转发按钮.png",
         "action": "Click",
         "next": [
-            "转发微信好友8"
+            "转发微信好友8",
+            "收藏",
+            "收藏返回"
         ],
         "pre_wait_freezes": 250
     },
     "转发微信好友8": {
-        "recognition": "TemplateMatch",
-        "template": "转发微信好友按钮.png",
+        "recognition": "OCR",
+        "expected": "微信好友",
         "action": "Click",
         "next": [
             "收藏",
@@ -304,17 +314,22 @@
         "recognition": "TemplateMatch",
         "template": "返回按钮2.png",
         "action": "Click",
+        "pre_delay": 3000,
         "next": [
             "大象台"
-        ]
+        ],
+        "pre_wait_freezes": 250
     },
     "大象台": {
         "recognition": "OCR",
         "expected": "大象台",
         "action": "Click",
+        "pre_delay": 3000,
         "next": [
-            "河南卫视"
-        ]
+            "河南卫视",
+            "大象台"
+        ],
+        "pre_wait_freezes": 250
     },
     "河南卫视": {
         "recognition": "TemplateMatch",
@@ -322,7 +337,8 @@
         "action": "Click",
         "next": [
             "观看电视1"
-        ]
+        ],
+        "pre_wait_freezes": 250
     },
     "观看电视1": {
         "action": "Swipe",
@@ -354,15 +370,25 @@
     },
     "观看直播2": {
         "recognition": "OCR",
-        "expected": "直播",
+        "expected": "回放",
         "action": "Click",
         "next": [
-            "观看直播3"
+            "观看直播3",
+            "观看回看3"
         ]
     },
     "观看直播3": {
         "recognition": "OCR",
-        "expected": "直播中",
+        "expected": "回放",
+        "action": "Click",
+        "next": [
+            "观看直播3",
+            "观看直播4"
+        ]
+    },
+    "观看回看3": {
+        "recognition": "OCR",
+        "expected": "回看：",
         "action": "Click",
         "next": [
             "观看直播4"
@@ -393,13 +419,43 @@
         ],
         "duration": 2000,
         "next": [
-            "观看直播5"
+            "观看直播5",
+            "观看回看5",
+            "观看直播播5"
         ]
     },
     "观看直播5": {
         "recognition": "OCR",
+        "expected": "回放",
+        "action": "Click",
+        "next": [
+            "观看直播完成",
+            "进入返回"
+        ]
+    },
+    "观看回看5": {
+        "recognition": "OCR",
+        "expected": "回看",
+        "action": "Click",
+        "next": [
+            "观看直播完成",
+            "进入返回"
+        ]
+    },
+    "观看直播播5": {
+        "recognition": "OCR",
         "expected": "直播中",
         "action": "Click",
+        "next": [
+            "观看直播完成",
+            "进入返回"
+        ]
+    },
+    "进入返回": {
+        "recognition": "TemplateMatch",
+        "template": "返回按钮2.png",
+        "action": "Click",
+        "pre_delay": 20000,
         "next": [
             "观看直播完成"
         ]
@@ -458,7 +514,8 @@
         "expected": "期待你查重0%的评论",
         "action": "Click",
         "next": [
-            "进行评论1"
+            "进行评论1",
+            "进入评论1"
         ]
     },
     "进行评论1": {
@@ -517,7 +574,8 @@
         "expected": "期待你查重0%的评论",
         "action": "Click",
         "next": [
-            "进行评论2"
+            "进行评论2",
+            "进入评论2"
         ]
     },
     "进行评论2": {
@@ -576,7 +634,8 @@
         "expected": "期待你查重0%的评论",
         "action": "Click",
         "next": [
-            "进行评论3"
+            "进行评论3",
+            "进入评论3"
         ]
     },
     "进行评论3": {
@@ -635,7 +694,8 @@
         "expected": "期待你查重0%的评论",
         "action": "Click",
         "next": [
-            "进行评论4"
+            "进行评论4",
+            "进入评论4"
         ]
     },
     "进行评论4": {
@@ -694,7 +754,8 @@
         "expected": "期待你查重0%的评论",
         "action": "Click",
         "next": [
-            "进行评论5"
+            "进行评论5",
+            "进入评论5"
         ]
     },
     "进行评论5": {
@@ -753,7 +814,8 @@
         "expected": "期待你查重0%的评论",
         "action": "Click",
         "next": [
-            "进行评论6"
+            "进行评论6",
+            "进入评论6"
         ]
     },
     "进行评论6": {
@@ -812,7 +874,8 @@
         "expected": "期待你查重0%的评论",
         "action": "Click",
         "next": [
-            "进行评论7"
+            "进行评论7",
+            "进入评论7"
         ]
     },
     "进行评论7": {
@@ -871,7 +934,8 @@
         "expected": "期待你查重0%的评论",
         "action": "Click",
         "next": [
-            "进行评论8"
+            "进行评论8",
+            "进入评论8"
         ]
     },
     "进行评论8": {
@@ -930,7 +994,8 @@
         "expected": "期待你查重0%的评论",
         "action": "Click",
         "next": [
-            "进行评论9"
+            "进行评论9",
+            "进入评论9"
         ]
     },
     "进行评论9": {
@@ -989,7 +1054,8 @@
         "expected": "期待你查重0%的评论",
         "action": "Click",
         "next": [
-            "进行评论10"
+            "进行评论10",
+            "进入评论10"
         ]
     },
     "进行评论10": {
