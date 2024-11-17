@@ -19,7 +19,7 @@
     },
     "点击签到": {
         "recognition": "OCR",
-        "expected": "签到",
+        "expected": "点击签到",
         "action": "Click",
         "next": [
             "我的积分向下滑动"
@@ -40,15 +40,25 @@
             10
         ],
         "next": [
-            "领取"
+            "领取",
+            "返回"
         ]
     },
     "领取": {
-        "recognition": "OCR",
-        "expected": "领取",
+        "recognition": "TemplateMatch",
+        "template": "领取按钮.png",
         "action": "Click",
         "next": [
             "返回"
+            
+        ]
+    },
+    "已领取": {
+        "recognition": "OCR",
+        "expected": "已领取",
+        "next": [
+            "返回"
+            
         ]
     },
     "返回": {
@@ -83,6 +93,14 @@
             10,
             10
         ],
+        "next": [
+            "点击完成",
+            "点击图文浏览"
+        ]
+    },
+    "点击完成": {
+        "recognition": "TemplateMatch",
+        "template": "返回按钮2.png",
         "next": [
             "向下滑动"
         ]
@@ -132,8 +150,7 @@
         "pre_wait_freezes": 250,
         "next": [
             "点赞",
-            "转发",
-            "收藏"
+            "转发"
         ]
     },
     "点赞": {
@@ -142,8 +159,7 @@
         "action": "Click",
         "next": [
             "点赞",
-            "转发",
-            "收藏"
+            "转发"
         ],
         "pre_wait_freezes": 250
     },
@@ -286,7 +302,6 @@
         "action": "Click",
         "next": [
             "转发微信好友8",
-            "收藏",
             "收藏返回"
         ],
         "pre_wait_freezes": 250
@@ -294,16 +309,6 @@
     "转发微信好友8": {
         "recognition": "OCR",
         "expected": "微信好友",
-        "action": "Click",
-        "next": [
-            "收藏",
-            "收藏返回"
-        ],
-        "pre_wait_freezes": 250
-    },
-    "收藏": {
-        "recognition": "TemplateMatch",
-        "template": "收藏按钮.png",
         "action": "Click",
         "next": [
             "收藏返回"
@@ -316,7 +321,25 @@
         "action": "Click",
         "pre_delay": 3000,
         "next": [
-            "大象台"
+            "收藏返回",
+            "大象台",
+            "故障1"
+        ],
+        "pre_wait_freezes": 250
+    },
+    "故障1": {
+        "recognition": "TemplateMatch",
+        "template": "故障情况.png",
+        "action": "Click",
+        "target":[
+            475,
+            687,
+            0,
+            0
+        ],
+        "next": [
+            "大象台",
+            "故障1"
         ],
         "pre_wait_freezes": 250
     },
@@ -370,7 +393,7 @@
     },
     "观看直播2": {
         "recognition": "OCR",
-        "expected": "回放",
+        "expected": "直播",
         "action": "Click",
         "next": [
             "观看直播3",
@@ -1785,7 +1808,8 @@
         "expected": "图文",
         "action": "Click",
         "next": [
-            "选择标题1"
+            "选择标题1",
+            "发布开始1"
         ]
     },
     "选择标题1": {
